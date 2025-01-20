@@ -1,0 +1,20 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract BlockChainFresher{
+
+    uint256 public luckyNumber = 55; // storage variable: it's stored in a section of the blockchain called "Storage". Pulic keyword was used to change its visibility
+
+    function assignLuckyNumber(uint256 newLuckyNumber) public {//always remember 'function' <name> <parameters> <visibility> {}
+
+        luckyNumber = newLuckyNumber;
+    }
+    
+    function retrieve() public view returns(uint256){
+        return luckyNumber;//just reads the data only.No cost until called inside another gas consuming funtion
+    }
+}
+//public: accessible from both inside the contract and from external contracts
+//private: accessible only within the _current contract_. It does not hide a value but only restricts its access.
+//external: used only for _functions_. Visible only from _outside_ the contract.
+//internal: accessible by the current contract and any contracts _derived_ from it.
