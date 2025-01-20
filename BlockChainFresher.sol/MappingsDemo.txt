@@ -1,0 +1,31 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract BlockChainFresher{
+
+    uint256[] public luckyNumberList; // storage variable: it's stored in a section of the blockchain called "Storage". Pulic keyword was used to change its visibility
+
+
+    struct Person{
+        uint256 luckyNumber;
+        string name;
+    }
+
+
+    //creating array of struct
+    Person[] public listOfLuckyPeople;//this is dynamic array .Otherwise we need to specify length in the square brackets
+    mapping (string => uint256) public listDemo;
+
+    function addPerson(uint256 newLuckyNumber, string memory newPerson) public {
+        listOfLuckyPeople.push(Person(newLuckyNumber,newPerson));
+        listDemo[newPerson]=newLuckyNumber;
+    }
+
+    function showLuckyPerson(uint256 index) public view returns(Person memory){
+        return listOfLuckyPeople[index];
+    }
+
+    
+    
+
+}
