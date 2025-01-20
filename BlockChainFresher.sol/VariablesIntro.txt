@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract BlockChainFresher{
+    // creating variables with various datatypes
+    bool hasADog = false;
+    bool hasABike = true;
+
+    uint256 luckyNumber = 55;
+    int256 newNumber = -67;
+
+    string greeting = "hello , good morning !";
+    string name = "joel";
+
+    address myCurrentAccount = 0xe961C0D7b63A70bCaafFC30e3BeC616a8318219A;//a set of bytes datatype
+    bytes32 animal = "fox";
+}
