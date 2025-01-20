@@ -1,0 +1,8 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+//other usage of pragma directives are '0.8.9' (to get exact version)  using '<' or '>' or '=<' or '=>' symbols for indicating a range of compiler version.
+// Make sure that compiler version matches.
+
+contract BlockChainFresher{//contract with same file name. A contract is equivalent to a class.
+
+}
